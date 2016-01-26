@@ -1,0 +1,106 @@
+div, ul, li, p, span{padding: 0; margin: 0;}
+
+.INFO, .string{
+    color: #5FBF5F;
+}
+.ERROR, .key{
+    color: #E23737;
+}
+.WARN, .number{
+    color: #f80;
+}
+
+.hidden {
+    display: none;
+}
+
+.tree-node.off {
+    display: inline-block;
+    width: 28px;
+    height: 11px;
+    background-image: url(data:image/gif;base64,R0lGODlhHAALAMQAAP////7++/z8/Pb29fb18PHx7e/w6/Hw6e3s5unp4+jm2ODg3t3a0dnVy9bQxtLMv8zJurDC1L+9sMK4p32buDMzMwAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEHABcALAAAAAAcAAsAAAVU4CWOZGmeV0StLBWhsEgBdA1QMUwJvMUTuNyJMihaBodFUFiiECxQKGMpqlSq14uVRCkUEJbEokHVZrdmrqLRsDgekDLzQoFIJni8nKlqrV5zgYIhADs=);
+}
+
+.tree-node {
+    display: inline-block;
+    width: 28px;
+    height: 11px;
+    margin-bottom: -1px;
+    background-image:url(data:image/gif;base64,R0lGODlhHAALAMQAAP////7++/z8/Pb29fb18PHx7e/w6/Hw6e3s5unp4+Dg3t3a0djY0dnVy9fTxNbQxtLMv8zJurDC1L+9sMK4p32buAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEHABcALAAAAAAcAAsAAAVL4CWOZGmel1StbCWhsFgBdA1UMVwJQd8TuNypMigWD4qgsFQhWJ7PhXI5qhQKCERC0ZhSLxUFo+FwQCJeagUyobjd6aWqtXp979QQADs=);
+}
+
+.logger{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #000;
+    opacity: 0.8;
+    overflow: hidden;
+}
+.logger-list {
+    width: 100%;
+    height: 88%;
+    padding-bottom: 20px;
+    list-style-type: none;
+    overflow-x:hidden; 
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.logger-item{
+    padding: 10px;
+    border-bottom: 1px solid #484848;
+}
+.logger-item:last-child{
+    border:none;
+}
+.logger-time {
+    color: #aaa;
+    font-size: 12px;
+}
+.logger-content {
+    padding: 10px 0;
+}
+
+#logger-clear{
+    display: block;
+    font-size: 9px;
+    text-align: center;
+    background-color: #eee;
+    color: #333;
+    margin: 0;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    height: 15px;
+    width: 40px;
+    line-height: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0,0,0,.5);
+}
+
+#logger-dragger{
+    position: absolute;
+    margin: 0;
+    height: 20px;
+    width: 50px;
+    background-color: rgba(18, 98, 168,.4);
+    border-radius: 2px 2px 0 0;
+    right: 10px;
+    bottom: 0;
+}
+#logger-dragger:after{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    content: "";
+    border: #fff solid;
+    border-width: 1px 0;
+    width: 25px;
+    height: 5px;
+    margin: -3px 0 0 -13px;
+}
