@@ -14,12 +14,14 @@
         'index': -1
     };
 
+    // obj is the dest!
     var _extend = function(obj){
         if(typeof obj !== 'object'){
             return obj;
         }
         var source, prop;
 
+        // first argument is the destination, so start from second
         for(var i = 1, len = arguments.length; i < len; i++){
             source = arguments[i];
             for(prop in source){
@@ -29,6 +31,7 @@
                             var oldFun = obj[prop];
 
                             obj[prop] = function(){
+                                // arguments of this current function
                                 source[prop].apply(source, arguments);
                                 oldFun.apply(obj, arguments);
                             };
@@ -369,7 +372,7 @@
 
         list.addEventListener('scroll', function(){
             // console.info('scrolling');
-            if(list.scrollTop < 0) {
+            if(list.scrollTop <= 0) {
                 // console.warn('top');
                 getHistory();
             }
@@ -399,7 +402,7 @@
     var triggerLog = function(callback){
         var flag1, flag2, distance = 50,
             first = {
-                x: 0,
+                x: document.documentElement.clientWidth,
                 y: document.documentElement.clientHeight
             },
             second = {
@@ -407,7 +410,7 @@
                 y: 0
             },
             third = {
-                x: document.documentElement.clientWidth,
+                x: 0,
                 y: document.documentElement.clientHeight
             };
 
@@ -466,13 +469,10 @@
     console.log(4);
     console.log(5);
     console.log(6);
-    console.log(7);
-    console.log(8);
-    console.log(9);
-    console.log(10);
-    console.log(11);
+    console.info(window.location.toString());
+    console.info(window.navigator.userAgent);
+    console.log(window.performance);
     console.log('hello','world','prettyp');
-    console.info('nemo');
     console.error('buluo');
     console.report('CGI ERROR');
     console.log(4561);
